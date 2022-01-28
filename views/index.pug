@@ -3,3 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  section
+    h1 Messages
+    each message in messages
+      article
+        h1 #{message.user} posted at #{message.added.toString()}
+        p= message.text
